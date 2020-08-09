@@ -76,7 +76,7 @@ class _AuthScreenState extends State<AuthScreen> {
               height: 80,
               color: Warna.fff0f1,
             ),
-            ColumnDivider(space: 150),
+            ColumnDivider(space: 50),
             Row(
               children: <Widget>[
                 Expanded(
@@ -103,6 +103,48 @@ class _AuthScreenState extends State<AuthScreen> {
                     shape: StadiumBorder(side: BorderSide(color: Warna.fff0f1)),
                     onPressed: () {
                       // startScreen(context, RegisterScreen(),PageTransitionType.fade);
+                    },
+                  ),
+                ),
+              ],
+            ),
+            ColumnDivider(),
+            Text(
+              'Atau login dengan',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.montserrat(color: Warna.fff0f1),
+            ),
+            ColumnDivider(),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: FlatButton(
+                    padding: EdgeInsets.only(),
+                    child: Image.asset(
+                      'assets/images/fb.png',
+                      color: Warna.bgfb,
+                    ),
+                    // shape: CircleBorder(),
+                    onPressed: () {
+                      // loginFacebook();
+                    },
+                  ),
+                ),
+                RowDivider(),
+                SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: FlatButton(
+                    padding: EdgeInsets.only(),
+                    // color: Colors.white,
+                    child: Image.asset('assets/images/google.png'),
+                    shape: CircleBorder(),
+                    onPressed: () {
+                      // loginGoogle();
                     },
                   ),
                 ),
