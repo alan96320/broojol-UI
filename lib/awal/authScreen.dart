@@ -14,6 +14,7 @@ class AuthScreen extends StatefulWidget {
 class _AuthScreenState extends State<AuthScreen> {
   String masuk = 'Masuk';
   String daftar = 'Daftar';
+  String atau = 'Atau login dengan';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,9 +32,11 @@ class _AuthScreenState extends State<AuthScreen> {
                   if (choice == 'en') {
                     masuk = 'Login';
                     daftar = 'Register';
+                    atau = 'Or login with';
                   } else {
                     masuk = 'Masuk';
                     daftar = 'Daftar';
+                    atau = 'Atau login dengan';
                   }
                 });
                 print(choice);
@@ -110,7 +113,7 @@ class _AuthScreenState extends State<AuthScreen> {
             ),
             ColumnDivider(),
             Text(
-              'Atau login dengan',
+              atau,
               textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(color: Warna.fff0f1),
             ),
